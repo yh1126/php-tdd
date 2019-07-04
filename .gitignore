@@ -1,0 +1,17 @@
+.DS_Store
+._*
+
+Thumbs.db
+Thumbs.db:encryptable
+
+.swp
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+vendor/
+.phpunit.*
+.ruby-version

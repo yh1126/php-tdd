@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  # docker-compose run --rm composer
+  # docker-compose run --rm composer exec -v phpunit
+  composer:
+    image: composer:1.8
+    volumes:
+      - ./:/app
