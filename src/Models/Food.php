@@ -2,7 +2,12 @@
 
 namespace App\Models;
 
-class Food
-{
+use App\Models\Item;
 
+class Food extends Item
+{
+    public function isReducedTaxRate(): bool
+    {
+        return true;
+    }
 }

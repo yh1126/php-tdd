@@ -2,7 +2,12 @@
 
 namespace App\Models;
 
-class Lequor
-{
+use App\Models\Item;
 
+class Lequor extends Item
+{
+    public function isReducedTaxRate(): bool
+    {
+        return false;
+    }
 }

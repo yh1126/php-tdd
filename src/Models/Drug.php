@@ -2,7 +2,12 @@
 
 namespace App\Models;
 
-class Drug
-{
+use App\Models\Item;
 
+class Drug extends Item
+{
+    public function isReducedTaxRate(): bool
+    {
+        return false;
+    }
 }

@@ -2,7 +2,12 @@
 
 namespace App\Models;
 
-class QuasiDrug
-{
+use App\Models\Item;
 
+class QuasiDrug extends Item
+{
+    public function isReducedTaxRate(): bool
+    {
+        return false;
+    }
 }
