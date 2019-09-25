@@ -30,4 +30,10 @@ class ItemTest extends TestCase
     {
         $this->assertFalse((new Item($item_name = 'キリンチューハイ氷結グレープフルーツ350ml缶'))->isReducedTaxRate());
     }
+
+    /** @test */
+    public function 新ルルA錠s50錠は軽減税率対象でない()
+    {
+        $this->assertFalse((new Item($item_name = '新ルルA錠s50錠'))->isReducedTaxRate());
+    }
 }
