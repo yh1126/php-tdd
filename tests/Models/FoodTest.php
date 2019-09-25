@@ -16,18 +16,18 @@ class FoodTest extends TestCase
     /** @test */
     public function 手巻直火焼き紅しゃけの税抜き価格が取得できる()
     {
-        $this->assertEquals(139, (new Food($name = '手巻直火焼き紅しゃけ'))->tax_exclude_price);
+        $this->assertEquals(139, (new Food($name = '手巻直火焼き紅しゃけ'))->excludeTaxPrice());
     }
 
     /** @test */
     public function 大きなおむすびマヨネーズの税抜き価格が取得できる()
     {
-        $this->assertEquals(186, (new Food($name = '大きなおむすびマヨネーズ'))->tax_exclude_price);
+        $this->assertEquals(186, (new Food($name = '大きなおむすびマヨネーズ'))->excludeTaxPrice());
     }
 
     /** @test */
     public function 手巻直火焼き紅しゃけの税込価格が取得できる()
     {
-        $this->assertEquals(150, (new Food($name = '手巻直火焼き紅しゃけ'))->tax_price);
+        $this->assertEquals(150, (new Food($name = '手巻直火焼き紅しゃけ'))->includeTaxPrice());
     }
 }
