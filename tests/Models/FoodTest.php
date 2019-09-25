@@ -24,4 +24,10 @@ class FoodTest extends TestCase
     {
         $this->assertEquals(186, (new Food($name = '大きなおむすびマヨネーズ'))->tax_exclude_price);
     }
+
+    /** @test */
+    public function 手巻直火焼き紅しゃけの税込価格が取得できる()
+    {
+        $this->assertEquals(150, (new Food($name = '手巻直火焼き紅しゃけ'))->tax_price);
+    }
 }
