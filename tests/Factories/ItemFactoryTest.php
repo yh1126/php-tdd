@@ -7,6 +7,7 @@ use App\Models\Beverage;
 use App\Models\Drug;
 use App\Models\Food;
 use App\Models\Lequor;
+use App\Models\QuasiDrug;
 use Tests\TestCase;
 
 class ItemFactoryTest extends TestCase
@@ -33,5 +34,11 @@ class ItemFactoryTest extends TestCase
     public function 新ルルA錠s50錠を渡すとdrugクラスが返ってくる()
     {
         $this->assertInstanceOf(Drug::class, ItemFactory::create($name = '新ルルA錠s50錠'));
+    }
+
+    /** @test */
+    public function リポビタンDを渡すとQuasiDrugクラスが返ってくる()
+    {
+        $this->assertInstanceOf(QuasiDrug::class, ItemFactory::create($name = 'リポビタンD'));
     }
 }
