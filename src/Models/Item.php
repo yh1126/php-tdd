@@ -20,6 +20,10 @@ class Item
         if ($this->name === '新ルルA錠s50錠') {
             return false;
         }
+    
+        if ($this->name === 'リポビタンD') {
+            return false;
+        }
 
         return true;
     }

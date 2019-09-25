@@ -36,4 +36,10 @@ class ItemTest extends TestCase
     {
         $this->assertFalse((new Item($item_name = '新ルルA錠s50錠'))->isReducedTaxRate());
     }
+
+    /** @test */
+    public function リポビタンDは軽減税率対象でない()
+    {
+        $this->assertFalse((new Item($name = 'リポビタンD'))->isReducedTaxRate());
+    }
 }
