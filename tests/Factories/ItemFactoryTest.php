@@ -4,6 +4,7 @@ namespace Tests\Factories;
 
 use App\Factories\ItemFactory;
 use App\Models\Beverage;
+use App\Models\Drug;
 use App\Models\Food;
 use App\Models\Lequor;
 use Tests\TestCase;
@@ -26,5 +27,11 @@ class ItemFactoryTest extends TestCase
     public function キリンチューハイ氷結グレープフルーツ350ml缶を渡すとliquorクラスが返ってくる()
     {
         $this->assertInstanceOf(Lequor::class, ItemFactory::create($name = 'キリンチューハイ氷結グレープフルーツ350ml缶'));
+    }
+
+    /** @test */
+    public function 新ルルA錠s50錠を渡すとdrugクラスが返ってくる()
+    {
+        $this->assertInstanceOf(Drug::class, ItemFactory::create($name = '新ルルA錠s50錠'));
     }
 }
