@@ -14,6 +14,9 @@ class Food extends Item
         ],
         '大きなおむすびマヨネーズ' => [
             'tax_exclude_price' => 186
+        ],
+        'からあげ棒' => [
+            'tax_exclude_price' => 114
         ]
     ];
 
