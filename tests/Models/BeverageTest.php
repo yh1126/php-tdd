@@ -18,4 +18,16 @@ class BeverageTest extends TestCase
     {
         $this->assertEquals(140, (new Beverage($name = 'キリン生茶555mlペットボトル'))->excludeTaxPrice());
     }
+
+    /** @test */
+    public function オロナミンCの税抜価格が取得できる()
+    {
+        $this->assertEquals(105, (new Beverage($name = 'オロナミンC'))->excludeTaxPrice());
+    }
+
+    /** @test */
+    public function キリン生茶555mlペットボトルの税込価格が取得できる()
+    {
+        $this->assertEquals(151, (new Beverage($name = 'キリン生茶555mlペットボトル'))->includeTaxPrice());
+    }
 }

@@ -11,6 +11,9 @@ class Beverage extends Item
     const LIST = [
         'キリン生茶555mlペットボトル' => [
             'tax_exclude_price' => 140
+        ],
+        'オロナミンC' => [
+            'tax_exclude_price' => 105
         ]
     ];
 
@@ -27,5 +30,10 @@ class Beverage extends Item
     public function excludeTaxPrice(): int
     {
         return self::LIST[$this->name]['tax_exclude_price'];
+    }
+
+    public function includeTaxPrice(): int
+    {
+        return $this->excludeTaxPrice() + intval($this->excludeTaxPrice() * (8 / 100));
     }
 }
